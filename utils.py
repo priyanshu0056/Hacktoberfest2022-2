@@ -21,3 +21,11 @@ def palindrome():
   if palindrome_word == reverse_word:
       palindrome = True
   return palindrome
+
+def quicksort(array):
+    if len(array) <= 1:
+        return array
+    else:
+        return quicksort([x for x in array[1:] if x < array[0]])
+        + [array[0]]
+        + quicksort([x for x in array[1:] if x >= array[0]])
